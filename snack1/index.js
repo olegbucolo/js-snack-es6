@@ -17,17 +17,16 @@ const arrBici = [
     },
 ]
 
-let peso = arrBici[0].peso
+let lightBici = arrBici[0]
 for (let bici of arrBici) {
-    if (bici.peso < peso) {
-        peso = bici.peso
+    if (bici.peso < lightBici.peso) {
+        lightBici = bici
         
     }
 }
 
-let pesoMinore = arrBici.find(b => b.peso === peso)
 console.log(
-            'bici con peso minore: %c' + pesoMinore.nome + '%c, pesa %c' + pesoMinore.peso,
+            'bici con peso minore: %c' + lightBici.nome + '%c, pesa %c' + lightBici.peso,
             'color: green; font-weight: bold;',
             '',
             'color: red; font-weight: bold;'
